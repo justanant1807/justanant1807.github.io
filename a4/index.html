@@ -37,11 +37,11 @@
             let a = Number(A.value);
             let b = Number(B.value);
             //alert(a+b)
-            dvResult.innerHTML = "Sum: " + add(a,b) + "<br>" + "Difference: " + subtract(a, b) + "<br>" + "Product: " + multiply(a,b) + "<br>" + "Quotient: " + divide(a,b) + "<br>"
+            dvAdd.innerHTML = "Sum: " + add(a,b) + "<br>" 
 
-            // dvResult.innerHTML = "Difference: " + subtract(a, b) + "<br>"
-            // dvResult.innerHTML = "Product: " + multiply(a,b) + "<br>"
-            // dvResult.innerHTML = "Quotient: " + divide(a,b) + "<br>"
+            dvSub.innerHTML = "Difference: " + subtract(a, b) + "<br>"
+            dvMul.innerHTML = "Product: " + multiply(a,b) + "<br>"
+            dvDiv.innerHTML = "Quotient: " + divide(a,b) + "<br>"
 
       }
     </script>
@@ -53,6 +53,9 @@
         <button onclick="calc()">Submit</button>
     </hr>
 
-    <div id = "dvResult"></div>
+    <div id = "dvAdd"></div>
+    <div id = "dvSub"></div>
+    <div id = "dvMul"></div>
+    <div id = "dvDiv"></div>
 </body>
 </html>
