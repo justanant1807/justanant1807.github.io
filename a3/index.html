@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        function greet() {
+            alert(txtName.value);
+        } 
         function sum(){
             let a = Number(t1.value)
             let b = Number(t2.value)
             // alert( a + b );
+            alert(A.value ,"+", B.value, "is" )
             dvResult.innerHTML = a + b;
         }
     </script>
@@ -16,10 +20,14 @@
 <body>
     <!-- <input type="text" id = "A">
     <input type="text" id = "B"> -->
-    <button onclick = "sum()" style="background-color: blue;">Click</button>
+    <input type="text" id="txtName" />
+    <button onclick="greet()" style="background-color: yellow">Click</button>
     <hr>
-    <input type="text" id = "A">
-    <input type="text" name="" id="B">
+        <input type="text" id = "A">
+        <input type="text" name="" id="B">
+    <button onclick="calc">Submit</button>
+    </hr>
+    <div id = "dvResult"></div>
     
 </body>
 </html>
