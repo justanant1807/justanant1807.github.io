@@ -5,30 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function calc(){
-            let a = Number(t1.value)
-            let b = Number(t2.value)
-            // alert( a + b );
-            alert(A.value ,"added with", B.value, "is" )
-            dvResult.innerHTML = a + b;
-            alert(A.value ,"subtracted by", B.value, "is" )
-            dvResult.innerHTML = a - b;
-            alert(A.value ,"multiplied by", B.value, "is" )
-            dvResult.innerHTML = a*b;
-            alert(A.value ,"divided by", B.value, "is" )
-            dvResult.innerHTML = a/b
+        
+        function add(a,b){
+            
+            return a+b
         }
+
+        function subtract(a,b) {
+            
+            return a-b
+
+        }
+
+        function multiply(a,b) {
+            
+            return a*b
+        }
+
+        function divide(a,b){
+            
+            return a/b
+        }
+
+        
+        // let addition = main(add)
+        // let multiplication = main(multiply)
+        // let division = main(divide)
+        // let subraction = main(subtract)
+
+        function calc() {
+            let a = Number(A.value);
+            let b = Number(B.value);
+            //alert(a+b)
+            dvResult.innerHTML = "Sum: " + add(a,b) + "<br>"
+            dvResult.innerHTML = "Difference: " + subtract(a, b) + "<br>"
+            dvResult.innerHTML = "Product: " + multiply(a,b) + "<br>"
+            dvResult.innerHTML = "Quotient: " + divide(a,b) + "<br>"
+
+      }
     </script>
 </head>
 <body>
-    <!-- <input type="text" id = "A">
-    <input type="text" id = "B"> -->
-    <!-- <button onclick = "sum()" style="background-color: blue;">Click</button> -->
     <hr>
         <input type="text" id = "A">
         <input type="text" name="" id="B">
         <button onclick="calc()">Submit</button>
     </hr>
+
     <div id = "dvResult"></div>
 </body>
 </html>
