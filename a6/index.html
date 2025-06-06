@@ -7,7 +7,12 @@
     <script>
         const add_fruit = () =>{
 
-            const dvResult = fruits.map((fruit) => fruit)
+            const fruits = []
+            
+            const Arr = fruits.forEach((txtfruit) => fruits.push(txtfruit))
+
+            dvResult.innerHTML = fruits.forEach((txtfruit) => txtfruit.value )
+
 
         }
     </script>
@@ -16,7 +21,7 @@
     <center>
         <h1>Fruit List</h1>
     </center>
-    <input type="text" id="fruit" />
+    <input type="text" id="txtfruit" />
     <button onclick="add_fruit()" style="background-color: whitesmoke">Add</button>
     <hr>
     <div id = "dvResult"></div>
