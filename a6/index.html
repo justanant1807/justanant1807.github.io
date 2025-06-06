@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fruit List</title>
+  <script>
+    let fruits = [];
 
+    function add() {
+      const input = document.getElementById("txt1").value.trim();
+      if (input === "") return;
+
+      fruits.push(input);
+      updateList();
+      document.getElementById("txt1").value = "";
+    }
+
+    function remove(indexToRemove) {
+      fruits = fruits.filter((_, index) => index !== indexToRemove);
+      updateList();
+    }
+
+    function updateList() {
+      const listHTML = fruits
+        .map((fruit, index) =>
+          `<li>${fruit} <button onclick="remove(${index})">Delete</button></li>`
+        )
+        .join("");
+      document.getElementById("fruitList").innerHTML = listHTML;
+    }
+  </script>
 </head>
 <body>
-    <center>
-        <h1>Fruit List</h1>
-    </center>
-    <input type="text" id="txtfruit" />
-    <button onclick="add_fruit()" style="background-color: whitesmoke">Add</button>
-    <hr>
-    <div id = "dvResult"></div>
-
-    <script>
-        const add_fruit = () =>{
-
-            const fruits = fruits.forEach((txtfruit) => fruits.push(document.getElementById(txtfruit)))
-            fruits.forEach((txtfruit) => {
-                dvResult.innerHTML = console.log(txtfruit)
-            } 
-        )
-
-
-        }
-    </script>
-
-</hr>
+  <div>
+    <h1>Fruit List</h1>
+    <input type="text" id="txt1" />
+    <button onclick="add()">Add</button>
+    <ul id="fruitList"></ul>
+  </div>
 </body>
 </html>
