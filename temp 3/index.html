@@ -7,9 +7,70 @@
 </head>
 <body>
     <script>
-        x =10
-        console.log(x)
-        var x
+        // x =10;
+        // console.log(x);
+        // var x;
+
+        // function f1(){
+        //     console.log("f1 function");
+        // }
+
+        // const f1 = () =>{
+        //     console.log("f1 function");
+        // }
+        // f1();
+
+        const fruits = ["apple", "mango", "orange"]
+        // console.log(fruits[0])
+        // fruits.push("banana")
+        // console.log(fruits)
+        // fruits.pop()
+        // console.log(fruits)
+        console.log(fruits.length)
+        // for(let i = 0 ; i < fruits.length ; i++){
+        //     console.log(fruits[i])
+        // }
+
+        fruits.forEach((fruit) => console.log(fruit))
+
+        // const newArr = fruits.map((value) => value)
+        //or
+        // fruits.map((fruit)=)
+        // const newArr =fruits.map((fruit) => fruit);
+        // console.log(newArr)
+
+        // const newArr1 = fruits.filter((fruit) => fruit === "apple");
+        // console.log(newArr1)
+
+        // const newArr2 = fruits.find((fruit) => fruit === "apple");
+        // console.log(newArr2)
+
+        // const score = [4, 2, 1, 6, 7];
+
+        // const newArr = score.map((element) => "ID00" + element)
+        // console.log(newArr)
+
+        // // const newArr2 = score.filter((e) => {return e>2})
+        // const newArr2 = score.filter((e) => e>2)
+        // console.log(newArr2)
+
+        // const newArr3 = score.find((e) => e>2)
+        // console.log(newArr3)
+
+        // const newArr4 = score.reduce((sum,e) => sum+e)
+        // console.log(newArr4)
+
+        const add = (...args) =>{
+
+            const total = args.reduce((sum,e)=>sum+e)
+            return total
+
+        }
+
+        const result = add(4,6,7,9,3)
+        console.log(result)
+
+
     </script>
 </body>
 </html>
