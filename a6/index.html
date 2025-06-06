@@ -9,15 +9,15 @@
 
     function add() {
       const input = document.getElementById("txt1").value.trim();
-      if (input === "") return;
+      if (input === "") return; // What does this mean and do ?
 
       fruits.push(input);
       updateList();
-      document.getElementById("txt1").value = "";
+      document.getElementById("txt1").value = ""; // What does this mean and do ?
     }
 
     function remove(indexToRemove) {
-      fruits = fruits.filter((_, index) => index !== indexToRemove);
+      fruits = fruits.filter((_, index) => index !== indexToRemove); //what does the _ do ?
       updateList();
     }
 
