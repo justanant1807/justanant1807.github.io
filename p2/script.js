@@ -19,7 +19,7 @@ const showRegister = () => {
     <p><input type="password" id="txtPass"></p>
     <button>Register</button>
     <hr>
-    <button onClick='showLogin()'>Alread a Member? Login here...</button>
+    <button onClick='showLogin()'>Already a Member? Login here...</button>
     `
     root.innerHTML = str
 }
