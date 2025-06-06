@@ -4,18 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        const add_fruit = () =>{
 
-            const fruits = []
-            
-            const Arr = fruits.forEach((txtfruit) => fruits.push(txtfruit))
-
-            fruits.forEach((txtfruit) => (dvResult.innerHTML= txtfruit.value) )
-
-
-        }
-    </script>
 </head>
 <body>
     <center>
@@ -25,6 +14,20 @@
     <button onclick="add_fruit()" style="background-color: whitesmoke">Add</button>
     <hr>
     <div id = "dvResult"></div>
+
+    <script>
+        const add_fruit = () =>{
+
+            const fruits = fruits.forEach((txtfruit) => fruits.push(document.getElementById(txtfruit)))
+            fruits.forEach((txtfruit) => {
+                dvResult.innerHTML= console.log(txtfruit)
+            } 
+        )
+
+
+        }
+    </script>
+
 </hr>
 </body>
 </html>
