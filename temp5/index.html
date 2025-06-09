@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id ="dvUsers"></div>
+    
+    <script>
+
+        //code to get the data from the url (jsonplaceholder)
+        const url = "https://jsonplaceholder.typicode.com/users";
+        let str = "<div>";
+        //fetch function, data comes in raw format so we convert to json format , the data will come in data variable then we print the data
+        fetch(url)
+            .then(res => res.json())
+            .then((users) => {
+                //console.log(data.name) //we get the name from the object 
+                //if we want to display the data
+                users.map(user=>{
+                    //console.log(user.name) // we loop through all of the user array and only print the name for each user
+                    //instead of console log we do this to stor in the variable str and try to print the data
+                    str+= `<div>    ${user.name}</div>`;
+            });
+
+
+            //dvUsers.innerHTML = str + "</div>";
+        });
+
+        const searchBar = () =>{
+            const str =`
+            <p><input type="text" id="txtEmail" placeholder="Email"></p>
+            <p><button onclick="searchFun()">Search</button></p>
+            `;
+            dvUser.innerHTML = str;
+        }
+
+        const searchFunction = () =>{
+
+            const email = document.getElementById("txtEmail").value;
+
+            const found = users.find(user => user.email === email);
+
+            if (found){
+                
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
